@@ -1,0 +1,362 @@
+{% extends 'shop/basic.html' %}
+
+{% block Title %} this is title {% endblock %}
+
+{% block css %}
+body{
+background-color:POWDERBLUE;
+}
+/*Navbar*/
+.navbar{
+    HEIGHT: 54PX;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+.navbar-brand{
+    display: inline-block;
+    position: relative;
+    bottom: 32px;
+    padding-top: 0.3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+
+}
+.nav-item{
+position :relative;
+bottom:30px;
+
+}
+.btn-secondary{
+    width: 80px;
+    position: relative;
+    left:1px;
+    bottom: 28px;
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn-outline-success{
+    width: 80px;
+    position: relative;
+    bottom: 28px;
+    left: 30px;
+    color: green;
+    border-color: #28a745;
+}
+.form-control{
+    position: relative;
+    bottom: 28px;
+    left:50px;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* About Section */
+.about-info p{
+    position: relative;
+    left: -18%;
+    font-size: 1.3rem;
+    margin: 0 2rem;
+    text-align: justify;
+}
+.about {
+	background: POWDERBLUE;
+	padding: 100px 0 20px 0;
+	text-align: center;
+}
+
+.about h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.about p {
+	font-size: 1rem;
+	color: #323030;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.about-info {
+	margin: 2rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+}
+
+.about-img {
+	width: 20rem;
+	height: 20rem;
+
+}
+
+.about-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: contain;
+}
+
+.about-info p {
+	font-size: 1.3rem;
+	margin: 0 2rem;
+	text-align: justify;
+}
+
+button {
+    position : relative;
+    right:17%;
+	border: none;
+	outline: 0;
+	padding: 10px;
+	margin: 2rem;
+	font-size: 1rem;
+	color: white;
+	background-color: #40b736;
+	text-align: center;
+	cursor: pointer;
+	width: 15rem;
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: #1f9405;
+}
+
+/* Team Section */
+.team {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.team h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.team-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	width: 18rem;
+	height: 25rem;
+	margin-top: 10px;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+	width: 18rem;
+	height: 12rem;
+}
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.card-info button {
+	margin: 2rem 1rem;
+}
+
+.card-name {
+	font-size: 2rem;
+	margin: 10px 0;
+}
+
+.card-role {
+	font-size: 1rem;
+	color: #888;
+	margin: 5px 0;
+}
+
+.card-email {
+	font-size: 1rem;
+	color: #555;
+}
+
+/* Footer */
+footer {
+	background-color: #222;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+	nav {
+		display: block;
+	}
+
+	.logo {
+		text-align: center;
+	}
+
+	.nav-links {
+		margin-top: 1rem;
+		justify-content: space-between;
+	}
+
+	.nav-links li {
+		margin-right: 0;
+	}
+
+	.about h1 {
+		font-size: 2rem;
+	}
+
+	.about p {
+		font-size: 0.9rem;
+	}
+
+	.about-info {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.about-img {
+		width: 60%;
+		height: 60%;
+		margin-bottom: 1rem;
+	}
+
+	.about-info p {
+		margin: 1rem 2rem;
+	}
+
+	.about-info button {
+		margin: 1rem 2rem;
+		width: 10rem;
+	}
+
+	.team {
+		margin: 0 1rem;
+	}
+{% endblock %}
+
+{% block body %}
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>About Us</title>
+</head>
+<header>
+
+</header>
+
+<body>
+	<section class="about">
+		<h1>About Us</h1>
+		<p style="font-weight: bold">My Awsome Cart</p>
+		<div class="about-info">
+			<div class="about-img">
+
+			</div>
+			<div>
+	<p>My Awsome cart is a world best Ecommerce Website where you can purchase different item like Smartphone,Laptop,Shoes,clothes
+	ipad etc....Our main aim is to provide best service to our users that's why we sell only well certified
+	product in our Website.It is a well secured and well trusted Company.
+	  Thankyou....</p>
+				<button>Read More...</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="team">
+		<h1>Meet Our Team</h1>
+		<div class="team-cards">
+			<!-- Cards here -->
+			<!-- Card 1 -->
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/
+business-office-business-woman-professional.jpg" alt="User 1">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Jane</h2>
+					<p class="card-role">CEO and Founder</p>
+					<p class="card-email">jane@example.com</p>
+					<p><button class="button">Contact</button></p>
+				</div>
+			</div>
+
+			<!-- Card 2 -->
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822183347/
+man-portrait-businessman-male.jpg" alt="User 2">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Miller</h2>
+					<p class="card-role">Co-Founder</p>
+					<p class="card-email">Miller@example.com</p>
+					<p><button class="button">Contact</button></p>
+				</div>
+			</div>
+			<!-- Card 3 -->
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/
+business-office-business-woman-professional.jpg" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Joe</h2>
+					<p class="card-role">Co-Founder</p>
+					<p class="card-email">Joe@example.com</p>
+					<p><button class="button">Contact</button></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>© 2023 My Awsome Cart. All Rights Reserved.</p>
+	</footer>
+</body>
+
+</html>
+ {% endblock  %}
+
+
